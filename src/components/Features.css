@@ -1,0 +1,340 @@
+.carloan-features-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+#Features {
+  padding: 10px 0;
+  margin-bottom: 100px;
+  background-color:white;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#Features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .carloan-features-wrapper {
+      padding: 60px 20px;
+  }
+  .carloan-title {
+      margin-left: 0;
+      text-align: center;
+  }
+}
+
+.carloan-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  color: #2563eb;
+  position: relative;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  z-index: 2;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.carloan-title::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  background: #2563eb;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.carloan-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+  
+}
+
+.carloan-feature-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color:black;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.carloan-feature-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 0 4px #2563eb;
+  background: rgba(117, 114, 114, 0.15);
+  border-color: #2563eb;
+}
+
+.carloan-feature-icon {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.carloan-feature-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.carloan-feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.carloan-feature-desc {
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* DESKTOP: 2 per row */
+@media (min-width: 768px) {
+  .carloan-feature-card:nth-child(1),
+  .carloan-feature-card:nth-child(2) {
+      animation-delay: 1s;
+  }
+
+  .carloan-feature-card:nth-child(3),
+  .carloan-feature-card:nth-child(4) {
+      animation-delay: 1.4s;
+  }
+
+  .carloan-feature-card:nth-child(5),
+  .carloan-feature-card:nth-child(6) {
+      animation-delay: 2s;
+  }
+}
+
+/* MOBILE: 1 per row */
+@media (max-width: 767px) {
+  .carloan-feature-card:nth-child(1) {
+      animation-delay: 0.3s;
+  }
+  .carloan-feature-card:nth-child(2) {
+      animation-delay: 0.6s;
+  }
+  .carloan-feature-card:nth-child(3) {
+      animation-delay: 0.9s;
+  }
+  .carloan-feature-card:nth-child(4) {
+      animation-delay: 1.2s;
+  }
+  .carloan-feature-card:nth-child(5) {
+      animation-delay: 1.5s;
+  }
+  .carloan-feature-card:nth-child(6) {
+      animation-delay: 1.8s;
+  }
+}
+
+
+#eli{
+  margin-top: -100px;
+}
+h1{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.eligibility-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/finallandingpage.webp');
+  background-size: 110%; /* Slightly bigger for zoom effect */
+  background-position: center center;
+  background-repeat: no-repeat;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: backgroundZoomPan 20s ease-in-out infinite alternate;
+  overflow: hidden; /* prevent scroll gaps */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Blur box with backdrop-filter and entrance animation */
+.blur-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 45px 60px;
+  max-width: 620px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease forwards 0.4s;
+}
+
+.eligibility-heading {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 12px rgba(0,0,0,0.7);
+  transform-origin: center;
+  opacity: 0;
+  animation: fadeScaleIn 1s ease forwards 1s;
+}
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  width: 100%;
+}
+
+.point {
+  background: rgba(255, 255, 255, 0.28);
+  padding: 22px 25px;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  color: black;
+  font-family: 800;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+  cursor: default;
+  text-decoration: bold;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.point:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.4);
+}
+
+
+.point:nth-child(1) {
+  animation-delay: 1.5s;
+}
+.point:nth-child(2) {
+  animation-delay: 1.7s;
+}
+.point:nth-child(3) {
+  animation-delay: 1.9s;
+}
+.point:nth-child(4) {
+  animation-delay: 2.1s;
+}
+
+@keyframes backgroundZoomPan {
+  0% {
+    background-size: 110%;
+    background-position: center center;
+  }
+  50% {
+    background-size: 115%;
+    background-position: center 40%;
+  }
+  100% {
+    background-size: 110%;
+    background-position: center center;
+  }
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeScaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .points-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blur-box {
+    padding: 30px 25px;
+  }
+
+  .eligibility-heading {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+}
