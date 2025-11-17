@@ -11,7 +11,7 @@ const Navbar = ({ isScrolled, isMenuOpen, toggleMenu, setIsMenuOpen }) => {
       <nav className='navbar'>
         <div className='logo'>
           <a href="/">
-            <img src="/logo.png" alt="upfund Logo" className="logo-image" />
+            <img src="/logofinal.png" alt="upfund Logo" className="logo-image" />
           </a>
         </div>
         

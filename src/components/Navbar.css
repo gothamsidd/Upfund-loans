@@ -74,8 +74,8 @@ html {
 }
 
 .logo-image {
-  height: 65px;
-  width: auto;
+  height: auto;
+  width: 200px;
   object-fit: contain;
   transition: all 0.3s ease;
 }
