@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Auth.css';
 
@@ -75,6 +75,27 @@ const Signup = () => {
       alert('Signup functionality is frontend-only. No backend integration.');
     }, 1000);
   };
+
+  // Fix body styles for full screen display
+  useEffect(() => {
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.display = 'block';
+    document.body.style.height = '100vh';
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.height = '100%';
+    document.documentElement.style.overflow = 'hidden';
+    
+    return () => {
+      document.body.style.margin = '';
+      document.body.style.padding = '';
+      document.body.style.display = '';
+      document.body.style.height = '';
+      document.body.style.overflow = '';
+      document.documentElement.style.height = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, []);
 
   return (
     <div className="auth-section">
