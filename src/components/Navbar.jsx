@@ -25,6 +25,7 @@ const Navbar = ({ isScrolled, isMenuOpen, toggleMenu, setIsMenuOpen }) => {
           <a href="/" className='nav-items' onClick={() => setIsMenuOpen(false)}>Home</a>
           <a href="/#about" className='nav-items' onClick={() => setIsMenuOpen(false)}>About</a>
           <a href="/#Features" className='nav-items' onClick={() => setIsMenuOpen(false)}>Features</a>
+          <a href="/#emi-calculator" className='nav-items' onClick={() => setIsMenuOpen(false)}>Calculator</a>
           <a href="/#contact-main" className='nav-items' onClick={() => setIsMenuOpen(false)}>Contact Us</a>
           <a href="/#carloanform" className="btn-apply-navbar" onClick={() => setIsMenuOpen(false)}>Apply Now</a>
         </div>

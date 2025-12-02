@@ -6,6 +6,7 @@ import Documentation from "./components/Documentation";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact"
 import CarLoanForm from "./components/CarLoanForm"
+import EMICalculator from "./components/EMICalculator"
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Features/>
       <Documentation/>
       <AboutUs/>
+      <EMICalculator/>
       <CarLoanForm/>
       <Contact/>
     </>
